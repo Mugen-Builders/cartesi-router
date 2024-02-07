@@ -1,5 +1,5 @@
 import { hexToString, getAddress } from "viem";
-import { Error_out, Log, Notice, Output, Report } from "./outputs";
+import { Error_out, Log, Notice, Output, Report, Voucher } from "./outputs";
 import { Wallet } from "cartesi-wallet";
 
 class DefaultRoute {
@@ -223,4 +223,4 @@ class Router {
     return controller.execute(request);
   }
 }
-export { Router };
+export { Router, Error_out, Log, Notice, Output, Report, Voucher };
