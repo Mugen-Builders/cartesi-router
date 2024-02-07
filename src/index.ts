@@ -1,6 +1,13 @@
 import { hexToString, getAddress } from "viem";
-import { Error_out, Log, Notice, Output, Report, Voucher } from "./outputs";
-import { Wallet } from "cartesi-wallet";
+import {
+  Wallet,
+  Error_out,
+  Log,
+  Notice,
+  Output,
+  Report,
+  Voucher,
+} from "cartesi-wallet";
 
 class DefaultRoute {
   public execute = (request: any): Output | Set<Output> => {

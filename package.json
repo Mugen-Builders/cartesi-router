@@ -23,6 +23,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "cartesi-wallet": "^1.0.0"
+    "cartesi-wallet": "^1.0.1",
+    "viem": "^2.7.6"
   }
 }
