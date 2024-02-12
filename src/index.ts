@@ -230,4 +230,15 @@ class Router {
     return controller.execute(request);
   }
 }
-export { Router, Error_out, Log, Notice, Output, Report, Voucher };
+export {
+  Router,
+  Error_out,
+  Log,
+  Notice,
+  Output,
+  Report,
+  Voucher,
+  AdvanceRoute,
+  DefaultRoute,
+  WalletRoute,
+};
