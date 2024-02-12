@@ -32,18 +32,6 @@ class AdvanceRoute extends DefaultRoute {
     return new Log("parsing advance state request");
   };
 }
-class Mint_NFTRoute extends DefaultRoute {
-  imgdata!: string;
-  constructor() {
-    super();
-  }
-
-  public execute = (request: any) => {
-    this.imgdata = request;
-    console.log("request is", request);
-    return new Notice(String(request.payload));
-  };
-}
 
 class WalletRoute extends AdvanceRoute {
   wallet: Wallet;
@@ -210,7 +198,6 @@ class Router {
     this.controllers.set("erc20_transfer", new TransferERC20Route(wallet));
     this.controllers.set("erc721_withdraw", new WithdrawERC721Route(wallet));
     this.controllers.set("erc721_transfer", new TransferERC721Route(wallet));
-    this.controllers.set("create_nft", new Mint_NFTRoute());
   }
   addRoute(name: string, method: DefaultRoute) {
     this.controllers.set(name, method);
@@ -230,15 +217,4 @@ class Router {
     return controller.execute(request);
   }
 }
-export {
-  Router,
-  Error_out,
-  Log,
-  Notice,
-  Output,
-  Report,
-  Voucher,
-  AdvanceRoute,
-  DefaultRoute,
-  WalletRoute,
-};
+export { Router, AdvanceRoute, DefaultRoute, WalletRoute };
